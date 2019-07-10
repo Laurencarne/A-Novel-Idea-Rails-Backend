@@ -17,7 +17,7 @@ class UsersController < ApplicationController
           ]
         },
         :orders => {
-          except: [:created_at, :updated_at],
+          except: [:updated_at],
           include: [
             :books => {
               except: [:created_at, :updated_at]
@@ -61,7 +61,7 @@ class UsersController < ApplicationController
             ]
           },
           :orders => {
-            except: [:created_at, :updated_at],
+            except: [:updated_at],
             include: [
               :books => {
                 except: [:created_at, :updated_at]
